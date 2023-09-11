@@ -30,11 +30,13 @@ public class ResourceManagerImpl implements ResourceManager {
         return new ResourceB(this);
     }
 
+    @Override
     public void releaseResourceA() {
         resourceASemaphore.release();
         System.out.println("ResourceA released");
     }
 
+    @Override
     public void releaseResourceB() {
         resourceBSemaphore.release();
         System.out.println("ResourceB released");
